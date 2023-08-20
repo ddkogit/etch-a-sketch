@@ -1,0 +1,27 @@
+
+
+#container{
+    background-color:blue;
+    border: 2px solid black;
+    width: 200px ;
+    height: 200px ;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.row{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.insideDiv{
+    width: 10px;
+    height: 10px;
+    background-color: green;
+    margin: 10px;
+    border: 1px solid black;
+  
+
+}
