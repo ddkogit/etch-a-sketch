@@ -6,12 +6,12 @@ console.log(container);
 
 let insideDivArr=[];
 
-for(let i=1;i<=5;i++){
+for(let i=1;i<=10;i++){
 
     const row = document.createElement("div");
     row.classList.add("row");
 
-        for(j=1;j<=5;j++){
+        for(j=1;j<=10;j++){
 
             
             const insideDiv = document.createElement("div");
@@ -33,9 +33,15 @@ for(let i=1;i<=5;i++){
                 insideDiv.style.backgroundColor="red";
             })
         })
-        // insideDivArr.forEach((insideDiv)=>{
-        //     insideDiv.addEventListener("mouseleave",()=>{
-        //         insideDiv.style.backgroundColor="green";
-        //     })
-        // })
+    
+        const reset = document.getElementById("reset");
+
+        reset.addEventListener("click",()=>{
+            
+        insideDivArr.forEach((insideDiv)=>{
+            
+                insideDiv.style.backgroundColor="green";
+            
+        })
+        })
 
