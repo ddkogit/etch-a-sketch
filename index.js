@@ -4,6 +4,7 @@ const container = document.getElementById("container");
 
 const containerSize=500;
 
+var pColor=251 ;
 
 function reset(){
     location.reload();
@@ -31,6 +32,7 @@ for(let i=1;i<=boxes;i++){
 
         for(j=1;j<=boxes;j++){
         
+        
             const insideDiv = document.createElement("div");
             insideDiv.style.width=`${divSize}px`;
             insideDiv.style.height=`${divSize}px`;
@@ -50,9 +52,9 @@ for(let i=1;i<=boxes;i++){
     
         insideDivArr.forEach((insideDiv)=>{
 
-            
             insideDiv.addEventListener("mouseenter",()=>{
-                insideDiv.style.backgroundColor="red";
+                pColor = pColor+1;
+                insideDiv.style.backgroundColor="#"+(pColor);
             })
         })
 

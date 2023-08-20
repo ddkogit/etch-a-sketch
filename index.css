@@ -8,8 +8,8 @@ body{
 
 
 #container{
-    background-color:blue;
-    border: 2px solid black;
+    background-color: white;
+    border: 2px solid rgb(148, 125, 125);
     width: 500px ;
     height: 500px ;
     display: flex;
@@ -33,6 +33,6 @@ body{
     margin: 0px;
     padding: 0px ;
  
-    background-color: green;
+    background-color: white;
   
 }
