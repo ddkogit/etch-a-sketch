@@ -1,24 +1,44 @@
 const container = document.getElementById("container");
 
-console.log(container);
 
 
+const containerSize=500;
+
+
+function reset(){
+    location.reload();
+   
+}
+
+const divSize=100;
+const boxes=containerSize/divSize;
 
 let insideDivArr=[];
 
-for(let i=1;i<=10;i++){
+
+
+
+function setBoxes(divSize=20,boxes=containerSize/divSize){
+
+
+
+
+for(let i=1;i<=boxes;i++){
+    
 
     const row = document.createElement("div");
     row.classList.add("row");
 
-        for(j=1;j<=10;j++){
-
-            
+        for(j=1;j<=boxes;j++){
+        
             const insideDiv = document.createElement("div");
+            insideDiv.style.width=`${divSize}px`;
+            insideDiv.style.height=`${divSize}px`;
+            
             
             insideDiv.classList.add("insideDiv");
             row.appendChild(insideDiv);
-            console.log(insideDiv);
+         
             
             insideDivArr.push(insideDiv);
         }
@@ -26,22 +46,43 @@ for(let i=1;i<=10;i++){
         container.append(row);
             
         }  
-        
-       
+             
+    
         insideDivArr.forEach((insideDiv)=>{
+
+            
             insideDiv.addEventListener("mouseenter",()=>{
                 insideDiv.style.backgroundColor="red";
             })
         })
+
+    }
+
+    const newSet = document.getElementById("newSet");
+
+    newSet.addEventListener("click",ask=()=>{
+        
+       
+        let divSize = Number.parseInt(prompt("enter a number less than 100"));
+        while(divSize>=100){
+            
+            
+            alert("Please enter number less than 100");
+             divSize = Number.parseInt(prompt("enter a number less than 100"));
+            
+        }
+        
+      
+        container.innerHTML = "";
+        setBoxes(divSize);
+    })
+
+    setBoxes();
     
-        const reset = document.getElementById("reset");
+    
+        const resetBtn = document.getElementById("reset");
 
-        reset.addEventListener("click",()=>{
-            
-        insideDivArr.forEach((insideDiv)=>{
-            
-                insideDiv.style.backgroundColor="green";
-            
-        })
-        })
+        resetBtn.addEventListener("click",reset);
 
+      
+     
