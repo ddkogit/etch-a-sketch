@@ -11,8 +11,8 @@ function reset(){
    
 }
 
-const divSize=100;
-const boxes=containerSize/divSize;
+var divSize=50;
+var boxes=containerSize/divSize;
 
 let insideDivArr=[];
 
@@ -89,6 +89,7 @@ for(let i=1;i<=boxes;i++){
 
         bnw.addEventListener("click",()=>{
             container.innerHTML="";
+            divSize=ask();
             setBoxes(divSize,containerSize/divSize,111,0);
         });
            
@@ -96,6 +97,7 @@ for(let i=1;i<=boxes;i++){
 
         color.addEventListener("click",()=>{
             container.innerHTML="";
+            divSize=ask();
             setBoxes(divSize,containerSize/divSize);
         });
            
