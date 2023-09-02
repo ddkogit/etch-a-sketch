@@ -1,3 +1,3 @@
 # Etch-A-Sketch
 
-[Visit Website](https://ddkogit.github.io/etch-a-sketch/){:target="\_blank"}
+[Visit Website](https://ddkogit.github.io/etch-a-sketch)
