@@ -99,7 +99,7 @@ for(let i=1;i<=boxes;i++){
             container.innerHTML="";
             divSize=ask();
             setBoxes(divSize,containerSize/divSize);
-        });
+        }); 
            
             
     
