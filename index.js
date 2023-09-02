@@ -5,7 +5,7 @@ const container = document.getElementById("container");
 const containerSize=500;
 
 var pColor=211 ;
-
+var addedColor=1;
 function reset(){
     location.reload();
    
@@ -19,11 +19,8 @@ let insideDivArr=[];
 
 
 
-function setBoxes(divSize=20,boxes=containerSize/divSize){
-
-
-
-
+function setBoxes(divSize=20,boxes=25,pColor=255,addedColor=1){
+    
 for(let i=1;i<=boxes;i++){
     
 
@@ -53,7 +50,7 @@ for(let i=1;i<=boxes;i++){
         insideDivArr.forEach((insideDiv)=>{
 
             insideDiv.addEventListener("mouseenter",()=>{
-                pColor = pColor+1;
+                pColor+=addedColor;
                 insideDiv.style.backgroundColor="#"+(pColor);
             })
         })
@@ -65,7 +62,7 @@ for(let i=1;i<=boxes;i++){
     newSet.addEventListener("click",ask=()=>{
         
        
-        let divSize = Number.parseInt(prompt("enter a number less than 100"));
+        let divSize = Number.parseInt(prompt("enter the size of brush less than 100"));
         while(divSize>=100){
             
             
@@ -76,7 +73,8 @@ for(let i=1;i<=boxes;i++){
         
       
         container.innerHTML = "";
-        setBoxes(divSize);
+      
+        setBoxes(divSize,containerSize/divSize);
     })
 
     setBoxes();
@@ -86,5 +84,22 @@ for(let i=1;i<=boxes;i++){
 
         resetBtn.addEventListener("click",reset);
 
+
+        const bnw = document.getElementById("bnw");
+
+        bnw.addEventListener("click",()=>{
+            container.innerHTML="";
+            setBoxes(divSize,containerSize/divSize,111,0);
+        });
+           
+        const color = document.getElementById("color");
+
+        color.addEventListener("click",()=>{
+            container.innerHTML="";
+            setBoxes(divSize,containerSize/divSize);
+        });
+           
+            
+    
       
      
