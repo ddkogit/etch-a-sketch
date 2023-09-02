@@ -4,7 +4,7 @@ const container = document.getElementById("container");
 
 const containerSize=500;
 
-var pColor=251 ;
+var pColor=211 ;
 
 function reset(){
     location.reload();
